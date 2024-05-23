@@ -404,7 +404,7 @@ export default function Index() {
             </form>
         </Modal>
         <Modal id={'delete_modal'} title={'Hapus Data'}>
-            <p className="py-3">Apakah anda yakin ingin menghapus <span className="font-semibold">"sd"</span></p>
+            <p className="py-3">Apakah anda yakin ingin menghapus <span className="font-semibold">s</span></p>
             <div className="flex w-full justify-end gap-3">
                 <label htmlFor="delete_modal" className="btn">Tidak</label>
                 <button onClick={() => handleDelete()} className="btn btn-success">Ya</button>

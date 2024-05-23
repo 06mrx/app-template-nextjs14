@@ -29,9 +29,12 @@ function stop() {
   NProgress.done();
 }
 
-Router.events.on("routeChangeStart", load);
-Router.events.on("routeChangeComplete", stop);
-Router.events.on("routeChangeError", stop);
+// Router.events.on("routeChangeStart", load);
+window.addEventListener('popstate', load);
+// Router.events.on("routeChangeComplete", stop);
+window.addEventListener('load', stop);
+// Router.events.on("routeChangeError", stop);
+window.addEventListener('error', stop);
 
 const originalFetch = window.fetch;
 window.fetch = async function (...args) {

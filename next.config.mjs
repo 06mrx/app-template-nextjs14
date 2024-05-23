@@ -26,8 +26,17 @@ const nextConfig = withPWA({
   },
 
   images: {
-    domains : ["api-siyanlik.test", "generatex.death-code.site"],
-  },
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "template-laravel11.test",
+      },
+      {
+        protocol: "https",
+        hostname: "generatex.death-code.site",
+      },
+    ],
+  },  
 })
 
 export default nextConfig
